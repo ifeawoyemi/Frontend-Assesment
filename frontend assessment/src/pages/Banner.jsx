@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './banner.css';
 import BgImg from '../../src/images/bg.png'
+import MovieContent from '../components/MovieContent';
+import MovieDate from '../components/MovieDate';
+import PlayBtn from '../components/PlayBtn';
 
 function Banner() {
     const [movies, setMovies] = useState([]);
@@ -23,30 +26,11 @@ function Banner() {
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className="col-lg-6 col-md-12 ">
-                            <div className="content">
-                                <img src="" alt="Movie Title" className='movie-title' />
-                                <h4>
-                                    <span>Year</span>
-                                    <span><i>age</i></span>
-                                    <span>length</span>
-                                    <span>Category</span>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Dicta debitis iste quidem 
-                                    mollitia enim impedit nostrum aliquam 
-                                    reiciendis cumque dolor officia a, ratione 
-                                    quae illo quasi voluptatibus facilis 
-                                    consequuntur perferendis?
-                                </p>
-                                <div className='button' onClick={fetchData}>
-                                    Button
-                                </div>
-                            </div>
+                           <MovieContent/> 
                         </div>
                         <div className="col-lg-6 col-md-12 ">
-                            <div className='date'>
-                                <h2>On 28th August 2023</h2>
-                            </div>
+                            <MovieDate/>
+                            <PlayBtn/>
                         </div>
                     </div>
                 </div>
